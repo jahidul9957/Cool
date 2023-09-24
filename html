@@ -1,0 +1,916 @@
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Cool</title>
+		<link rel="stylesheet" href="/static/css/style.css">
+		<link rel="stylesheet" href="/static/css/main-css.css">
+		<!-- 	<link rel="stylesheet" href="/static/css/style1.css"> -->
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+		<style type="text/css">
+#appCapsule{background: none;}
+			.fosm {
+				font-size: 16px;
+				padding-left: 4px;
+				color: #868D9A;
+				font-weight: 100;
+			}
+
+			.txt-green {
+				background-color: #29a93f;
+				color: #fff;
+				padding: 5px 8px;
+				border-radius: 4px;
+			}
+
+			.txt-red {
+				background-color: #F34954;
+				color: #fff;
+				padding: 5px 8px;
+				border-radius: 4px;
+
+			}
+
+			.transaction-list li {
+				padding: 16px 10px;
+				border-radius: 10px;
+				margin: 0 0 10px;
+				box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.04);
+				background: #f8f8f9;
+			}
+
+			.flex-column img {
+				max-width: 50px;
+				max-height: 50px;
+			}
+
+
+			.resources-card-wrapper {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-pack: distribute;
+				justify-content: space-around;
+			}
+
+			.buy-card {
+				background: #f8f8f9;
+				width: 48%;
+				padding: 20px 15px;
+				border-radius: 10px;
+				-webkit-box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+				box-shadow: 0px 0px 9px 1px rgba(0, 0, 0, 0.1);
+			}
+
+			.rien {
+				float: right;
+				margin-top: -26px;
+			}
+
+			.uine {
+				color: #868D9A;
+			}
+
+			.uine span {
+				display: block;
+				font-size: 16px;
+				color: #000;
+				padding-top: 2px;
+			}
+
+			.news-today-wrapper {
+				/*background: linear-gradient(180deg, #0160bf 0%, #ffffff 100%);*/
+				/*background-size: 100%;*/
+				margin-top: 20px;
+			}
+
+			.appHeader {
+				height: 56px;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				background-color: #1C57A8;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 9990;
+
+			}
+
+			.postCarousel .item .title {
+				color: #000;
+			}
+
+			.coyu {
+				background: #1377FE;
+				text-align: center;
+				color: #fff;
+				border-radius: 30px;
+				font-size: 12px;
+				padding: 6px 10px;
+				float: left;
+				margin-left: 6px;
+				margin-top: 6px;
+
+			}
+
+			/* 	.owl-item {
+				background-color: #f9f9f9;
+				padding: 4px;
+				border-radius: 4px;
+				padding-bottom: 10px;
+			} */
+			.text footer {
+				display: flex;
+				font-size: 14px;
+				align-content: center;
+				color: #8D95A0;
+				padding-left: 6px;
+			}
+
+			.sectionTitle .title h1 {
+				font-size: 28px;
+				font-weight: 900;
+				color: #1B2C42;
+				margin: 0;
+				padding-right: 20px;
+			}
+
+			.itema a {
+				display: flex;
+			}
+
+			.aui-palace {
+				position: relative;
+				overflow: hidden;
+				margin-top: 15px;
+			}
+
+			.aui-palace-grid {
+				position: relative;
+				float: left;
+				padding: 1px;
+				width: 25%;
+				box-sizing: border-box;
+				margin-bottom: 15px;
+			}
+
+			.aui-palace-ssion {
+				position: relative;
+				float: left;
+				padding: 1px;
+				width: 33.33%;
+				box-sizing: border-box;
+				margin-bottom: 15px;
+			}
+
+			.aui-palace-grid-icon {
+				width: 50%;
+				margin: 0 auto;
+			}
+
+			.aui-palace-ssion .aui-palace-grid-icon {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.aui-palace-grid-icon img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+
+			.aui-palace-grid-text {
+				display: block;
+				text-align: center;
+				color: #fff;
+				font-size: 14px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				padding-top: 10px;
+			}
+
+			.aui-palace-grid-text h2 {
+				font-size: 14px;
+				font-weight: normal;
+			}
+			
+			.products{
+			    margin: auto;
+			    display: flex;
+                display: -webkit-flex; /* Safari */
+                flex-direction: row ;
+                flex-wrap: wrap;
+                justify-content:space-between;
+			}
+			
+			.products-item{
+			    width: 45%;
+			    height: 192px;
+			    margin: 10px 0;
+			    background-color: #ffffff;
+			    border-radius: 15px;
+			    
+			}
+			.products .logo{
+			    width: 90%;
+                height: 136px;
+                margin: auto;
+			}
+			.products .logo img{
+			    width: 100%;
+                height: 120px;
+                object-fit: cover;
+			    
+			}
+			.products .desc{
+			    width: 100%;
+			    height: 56px;
+			    background-color: #E1F6FF;
+			}
+			/* 以下代码与滚动相关 */
+            .notice {
+                width: 100%;
+                height: 35px;
+                margin-top: 10px;
+                display: flex;
+                display: -webkit-flex; /* Safari */
+                flex-direction: row ;
+            }
+
+            .notice_icon{
+                width: 15px;
+                margin-left: 15px;
+                margin-right: 6px;
+            }
+            .notice_icon img{
+                width: 15px;
+                height: 15px;
+            }
+            #notice-box{
+                width: 300px;/*单行显示，超出隐藏*/
+                height: 30px;/*固定公告栏显示区域的高度*/
+                line-height: 30px;
+                font-size: 14px;
+                color: #666;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            #notice-box ul{
+                list-style: none;
+                text-align: left;
+                padding: 0;
+                margin: 0;
+            }
+            .recharge{
+                width: 100%;
+                height: 40px;
+            }
+            .btnimg{
+                width: 90%;
+                margin: auto;
+            }
+            .btnimg img{ 
+                width: 100%;
+                height: 35px;
+            }
+            
+
+			.guize_html {
+				width: 90%;
+				height: auto;
+				border-radius: 4px;
+				background-color: #ebb73d;
+				color: #000;
+				text-align: center;
+				font-size: 12px;
+				margin: auto;
+				margin-top: 100px;
+				/* 		padding-bottom: 20px; */
+			}
+
+			.guize_html p {
+				font-size: 12px;
+				padding: 0 16px;
+				text-align: left;
+				text-indent: 2em
+			}
+
+			.guize_html_nei {
+				color: #0e1a32;
+				min-height: 200px;
+				overflow-y: auto;
+				max-height: 300px;
+				height: 200px;
+				display: block;
+				overflow-y: scroll;
+			}
+
+			.btnyu {
+				display: block;
+				margin: 10px auto;
+				height: 40px;
+				border-radius: 0 0 4px 4px;
+				background-color: #c79829;
+				color: #000;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+			}
+
+			.overfloat {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 9;
+				display: none;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(1, 1, 1, .5)
+			}
+
+			.guize_html img {
+				width: 75px;
+				margin-top: -30px;
+				background: #182730;
+				border-radius: 50%;
+			}
+			
+			/*--弹窗--*/
+			.maskLayer{
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.5);
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 99;
+				display: block;
+			}
+			.popup{
+				width: 80%;
+				height: 28rem;
+				background-color: #FFFFFF;
+				z-index: 999;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -15rem;
+				margin-left: -40%;
+				border-radius: 15px;
+			}
+			
+			.title{
+				width: 100%;
+				line-height: 5rem;
+				font-size: 1.5rem;
+				color: #000000;
+				text-align: center;
+			}
+			
+			.content{
+				width: 90%;
+				height: 260px;
+				margin-left: 5%;
+				overflow-x: hidden;
+	            overflow-y: scroll;
+				line-height: 3rem;
+				font-size: 1rem;
+				color: #000000;
+			}
+		
+		
+			.btn-close{
+			    position: absolute;
+			    bottom: 5%;
+				width: 80%;
+				margin-left: 10%;
+				font-size: 1.2rem;
+				padding: 0.8rem;
+				color: #ffffff;
+				text-align: center;
+				border: 0;
+				border-radius: 10px;
+				background-color: #007bff;
+			}
+			
+			.news-item{
+			    height: 80px;
+			    margin:auto;
+			    margin-bottom: 10px;
+			    background-color: #ffffff;
+			    border-radius: 8px;
+			    display: flex;
+                display: -webkit-flex; /* Safari */
+                flex-direction: row ;
+			}
+			.news-item .image{
+			    width: 64px;
+			    height: 64px;
+			    border-radius: 12px;
+			}
+			.news-item .image img{
+			    width: 64px;
+			    height: 64px;
+			    margin: 8px;
+			}
+        
+		</style>
+	</head>
+
+	<body style="background-color:#F8F8FB;">
+
+
+		<div class="appHeader">
+			<div class="pageTitle">
+				<!--<img src="/static/img/logo1.png">-->
+				<h4 style="color:#fff;">Canadian Solar</h4>
+			</div>
+		</div>
+
+		<div class="news-today-wrapper pt-2">
+			<div class="container">
+				<div class="hero-slides owl-carousel">
+					<div class="single-hero-slide" style="background-image:url(/uploads/20230822/b1.jpg)">
+
+					</div>
+					<div class="single-hero-slide" style="background-image:url(/uploads/20230822/b2.jpg)">
+
+					</div>
+					<div class="single-hero-slide" style="background-image:url(/uploads/20230822/b3.jpg)">
+
+					</div>
+					
+					<div class="single-hero-slide" style="background-image:url(/uploads/20230822/b4.jpg)">
+
+					</div>
+					
+				</div>
+				<div class="owl-controls clickable">
+					<div class="owl-pagination">
+						<div class="owl-page"><span class=""></span></div>
+						<div class="owl-page active"><span class=""></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <div class="notice">
+            <div class="notice_icon"><img src="/static/img/notice.svg"/></div>
+        
+            <div id="notice-box">
+                <ul>
+                                    </ul>
+                <ul></ul>
+            </div>
+        </div>
+  
+
+		
+		<div class="aui-palace">
+			<a href="/index/message/about.html" class="aui-palace-grid">
+				<div class="aui-palace-grid-icon">
+					<img src="/static/img/homecoi_2.svg" alt="">
+				</div>
+				<div class="aui-palace-grid-text">
+					<h2>About</h2>
+				</div>
+			</a>
+			<a href="/index/message/helper.html" class="aui-palace-grid">
+				<div class="aui-palace-grid-icon">
+					<img src="/static/img/homecoi_3.svg" alt="">
+				</div>
+				<div class="aui-palace-grid-text">
+					<h2>Help</h2>
+				</div>
+			</a>
+			<a href="/index/account/friends.html" class="aui-palace-grid">
+				<div class="aui-palace-grid-icon">
+					<img src="/static/img/homecoi_5.svg" alt="">
+				</div>
+				<div class="aui-palace-grid-text">
+					<h2>Friends</h2>
+				</div>
+			</a>
+			<a href="/index/account/services.html" class="aui-palace-grid">
+				<div class="aui-palace-grid-icon">
+					<img src="/static/img/homecoi_4.svg" alt="">
+				</div>
+				<div class="aui-palace-grid-text">
+					<h2>Services</h2>
+				</div>
+			</a>
+		</div>
+		
+		<div class="recharge">
+            <div class="btnimg"><img src="/static/img/rechange.svg" usemap="#plantmap"></div>
+            <!-- map 客户端图像映射器。通过img标签的usemap与map的name绑定 -->
+    		<map id="plantmap" name="plantmap">
+    			<!-- area 定义图像映射中的区域:coords="0,0,120,35" :coords="140,35,260,0" -->
+    			<area class="recharge-btn" shape="rect" alt="recharge" href="/index/pay/index.html" />
+    			<area class="withdraw-btn" shape="rect"  alt="withdraw" href="/index/wallet/withdraw.html" />
+    		</map>
+		</div>
+		
+		
+		<div id="appCapsule" class="p-0">
+			<div class="appContent">
+				<div class="sectionTitle mb-2  pt-2">
+					
+					<div class="title">
+					    <div>
+					        <h1>Products</h1>
+						    <div class="text-muted" style="text-align:left;margin-top:10px">Overview</div>
+					    </div>
+						<a href="/index/product/index.html">View All</a>
+					</div>
+				</div>
+				
+				<div class="products">
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230901/e0b6cbe99d4353511b06c57963b059e6.png" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMICKqZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">HiKu, High Power dua...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 39800</div>
+    				        </div>
+				        </a>
+				    </div>
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230901/b5d9ab578169570c321d30d0f0b287cd.jpg" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMICKpZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">HiKu6, high power du...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 28500</div>
+    				        </div>
+				        </a>
+				    </div>
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230901/03b672426458eb5bd931df8bade88333.jpg" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMIKHoZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">BiHiKu6, high power ...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 14000</div>
+    				        </div>
+				        </a>
+				    </div>
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230901/c2739594260b4afefaf221eea5b13d79.jpg" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMIJ3oZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">HiKu7, high power du...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 6500</div>
+    				        </div>
+				        </a>
+				    </div>
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230901/d216a9421b6ba2d778f29f1b95a3b6f0.jpg" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMIGtoZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">BiHiKu7, high power ...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 2500</div>
+    				        </div>
+				        </a>
+				    </div>
+				    				    <div class="products-item">
+				        <div class="logo">
+				            <img src="/uploads/20230831/fd1eedd5d521871d05090f89b0037845.jpg" alt="image" class="image">
+				        </div>
+				        <a href="/index/product/details/id/MDAwMDAwMDAwMIGHoZ8O0O0O.html">
+    				        <div class="desc">
+    				            <div style="color:#000000;font-size:14px;line-height:30px;margin:0 12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">TOPBiHiKu7, N-type T...</div>
+    							<div style="color:#000000;font-size:12px;font-weight:bold;margin:0 12px;">Rs 550</div>
+    				        </div>
+				        </a>
+				    </div>
+				    
+				</div>
+				
+				<!--<div class="postCarousel owl-carousel owl-loaded owl-drag">-->
+				<!--	<div class="owl-stage-outer">-->
+				<!--		<div class="owl-stage" style="transform: translate3d(-670px, 0px, 0px); transition: all 0.25s ease 0s; width: 1923px; padding-left: 40px; padding-right: 40px;">-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMICKqZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230901/e0b6cbe99d4353511b06c57963b059e6.png" alt="image" class="image">-->
+				<!--						<h2 class="title">HiKu, High Power dua...</h2>-->
+				<!--						<span class="coyu">Rs 39800</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMICKpZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230901/b5d9ab578169570c321d30d0f0b287cd.jpg" alt="image" class="image">-->
+				<!--						<h2 class="title">HiKu6, high power du...</h2>-->
+				<!--						<span class="coyu">Rs 28500</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMIKHoZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230901/03b672426458eb5bd931df8bade88333.jpg" alt="image" class="image">-->
+				<!--						<h2 class="title">BiHiKu6, high power ...</h2>-->
+				<!--						<span class="coyu">Rs 14000</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMIJ3oZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230901/c2739594260b4afefaf221eea5b13d79.jpg" alt="image" class="image">-->
+				<!--						<h2 class="title">HiKu7, high power du...</h2>-->
+				<!--						<span class="coyu">Rs 6500</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMIGtoZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230901/d216a9421b6ba2d778f29f1b95a3b6f0.jpg" alt="image" class="image">-->
+				<!--						<h2 class="title">BiHiKu7, high power ...</h2>-->
+				<!--						<span class="coyu">Rs 2500</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--			<div class="owl-item  postItem">-->
+				<!--				<div class="item">-->
+				<!--					<a href="/index/product/details/id/MDAwMDAwMDAwMIGHoZ8O0O0O.html">-->
+				<!--						<img src="/uploads/20230831/fd1eedd5d521871d05090f89b0037845.jpg" alt="image" class="image">-->
+				<!--						<h2 class="title">TOPBiHiKu7, N-type T...</h2>-->
+				<!--						<span class="coyu">Rs 550</span>-->
+				<!--					</a>-->
+				<!--				</div>-->
+				<!--			</div>-->
+				<!--			-->
+				<!--		</div>-->
+						
+				<!--	</div>-->
+
+				<!--</div>-->
+				<div class="divider mt-1 mb-2"></div>
+				<div class="sectionTitle mb-2">
+					<div class="title">
+					    <div>
+					        <h1>Today</h1>
+						    <div class="text-muted" style="text-align:left;margin-top:10px">NEWS</div>
+					    </div>
+						<a href="/index/message/index.html">View All</a>
+					</div>
+
+				</div>
+				<div class="itemList">
+										<a href="/index/message/article/id/10.html">
+    					<div class="news-item">
+    						<div class="image">
+    							<img src="/uploads/20230903/3d8f9bb4082f2bfd80485fbf362db95f.jpg" alt="image">
+    						</div>
+    						<div>
+    							<div style="font-size:16px;margin-top:12px;margin-left:20px;color:#000000">Corporate promotional video</div>
+    							<div style="font-size:12px;margin-left:20px;color:#000000;margin-top:12px;">03/09/21 16:00:18</div>
+    
+    						</div>
+    					</div>
+					</a>
+					
+					
+					<!--<div class="item itema">-->
+					<!--	<a href="/index/message/article/id/10.html">-->
+					<!--		<div class="image">-->
+					<!--			<img src="/uploads/20230903/3d8f9bb4082f2bfd80485fbf362db95f.jpg" alt="image">-->
+					<!--		</div>-->
+					<!--		<div class="text">-->
+					<!--			<h4 class="title">Corporate promotional video</h4>-->
+					<!--			<div class="text-muted">03/09/21 16:00:18</div>-->
+
+					<!--		</div>-->
+					<!--	</a>-->
+					<!--</div>-->
+										<a href="/index/message/article/id/1.html">
+    					<div class="news-item">
+    						<div class="image">
+    							<img src="/uploads/20230903/3d8f9bb4082f2bfd80485fbf362db95f.jpg" alt="image">
+    						</div>
+    						<div>
+    							<div style="font-size:16px;margin-top:12px;margin-left:20px;color:#000000">Company Profile</div>
+    							<div style="font-size:12px;margin-left:20px;color:#000000;margin-top:12px;">03/08/21 14:16:25</div>
+    
+    						</div>
+    					</div>
+					</a>
+					
+					
+					<!--<div class="item itema">-->
+					<!--	<a href="/index/message/article/id/1.html">-->
+					<!--		<div class="image">-->
+					<!--			<img src="/uploads/20230903/3d8f9bb4082f2bfd80485fbf362db95f.jpg" alt="image">-->
+					<!--		</div>-->
+					<!--		<div class="text">-->
+					<!--			<h4 class="title">Company Profile</h4>-->
+					<!--			<div class="text-muted">03/08/21 14:16:25</div>-->
+
+					<!--		</div>-->
+					<!--	</a>-->
+					<!--</div>-->
+										
+				</div>
+
+			</div>
+			
+		</div>
+		<!-- * appCapsule -->
+		<section class="panel-space"></section>
+				<div class="appBottomMenu">
+			<div class="item active" >
+				<a href="/">
+					<p>
+						<i class="icon ion-ios-home"></i>
+						<span>Home</span>
+					</p>
+				</a>
+			</div>
+			<div class="item ">
+				<a href="/index/product/index.html">
+					<p>
+						<i class="icon ion-ios-keypad">
+							
+						</i>
+						<span>Products</span>
+					</p>
+				</a>
+			</div>
+			<div class="item ">
+				<a href="/index/account/team.html">
+					<p>
+						<i class="icon ion-ios-people"></i>
+						<span>Team</span>
+					</p>
+				</a>
+			</div>
+			<div class="item ">
+				<a href="/index/account/index.html">
+					<p>
+						<i class="icon ion-ios-person"></i>
+						<span>Personal</span>
+					</p>
+				</a>
+			</div>
+		</div>
+		
+		
+
+		
+		
+
+		<div class="overfloat" id="gui_kai" style="display: none;">
+			<div class="guize_html">
+
+				<span class="guize_html_nei">
+					<h5><br>Platform announcement</h5>
+
+					<p>
+											</p>
+
+				</span>
+				<div id="g_close" class="btnyu">
+					Ok
+				</div>
+			</div>
+		</div>
+
+		<script src="/static/js/jquery-3.4.1.min.js"></script>
+		<script src="/static/js/owl.carousel.min.js"></script>
+		<script src="/static/js/app.js"></script>
+	
+		
+		<script type="text/javascript">
+		
+		    let img = new Image();
+		    var coords = '';
+		    var txcoords = '';
+		    img.src = '/static/img/rechange.svg'
+		    var y2 = window.innerWidth*0.9*0.5;
+		    var x = y2;
+		    var y = y2 + window.innerWidth*0.9*0.5;
+		    
+		    coords = '0,0,'+y2+','+img.height;
+		    txcoords = x+','+img.height+','+y+',0';//:coords="140,35,260,0"
+		    var map = document.getElementsByClassName('recharge-btn')[0];
+		    map.setAttribute("coords", coords);
+
+		    var txmap = document.getElementsByClassName('withdraw-btn')[0];
+		    txmap.setAttribute("coords", txcoords);
+		    console.log(window.innerWidth,coords,txcoords)
+		    
+		    
+		    var box = document.getElementById('notice-box')
+            var parent = document.getElementsByTagName('ul')[0]
+            var parent2 = document.getElementsByTagName('ul')[1]
+            parent2.innerHTML = parent.innerHTML
+
+            /*启动定时器*/
+            var timer = setInterval(autoScrollLine,100)
+            /*单行向上滚动效果*/
+            function autoScrollLine() {
+                /*判断滚动内容是否已经滚完，滚完了则滚动的值重新设置到0 否则就每隔30毫秒向上滚动1px*/
+                if(box.scrollTop >= parent.offsetHeight){
+                    box.scrollTop=0;
+                }else{
+                    box.scrollTop++;
+                }
+                
+                /*判断滚动的距离刚好为一条公告的高度时停掉定时器，隔1s之后重新启动定时器即可实现公告滚动停留效果 */
+                if( (box.scrollTop>29 && box.scrollTop<31) || (box.scrollTop>89 && box.scrollTop<91)){
+                    if(parseInt(box.scrollTop)%box.offsetHeight==0){
+                        clearInterval(timer)
+                        
+                        setTimeout(()=>{
+                        
+                            timer = setInterval(autoScrollLine,100)
+                        
+                        },3000)
+                    }
+                }else{
+                    if(box.scrollTop%box.offsetHeight==0){
+                        clearInterval(timer)
+                        
+                        setTimeout(()=>{
+                        
+                            timer = setInterval(autoScrollLine,100)
+                        
+                        },3000)
+                    }
+                }
+            }
+   
+		
+		    $(document).ready(function(){
+
+                $(".btn-close,.maskLayer").on("click",function(e){
+                
+            	    // 点击关闭弹窗按钮及遮罩层关闭弹窗事件
+            	    $(".maskLayer,.popup").hide();
+            	    // 解除禁止滑动
+            		$("body").css("overflow","");
+            	})
+            });
+		    
+			(function($) {
+				if ($.fn.owlCarousel) {
+					var welcomeSlider = $('.hero-slides');
+					welcomeSlider.owlCarousel({
+						items: 1,
+						loop: true,
+						autoplay: true,
+						dots: false,
+						margin: 0,
+						nav: false,
+						smartSpeed: 1000,
+						autoplayTimeout: 5000
+					})
+				}
+
+			})(jQuery);
+
+
+			
+			var isview=0;
+					
+			if(isview==1){
+				 $("#gui_kai").show();
+			}
+
+			$('#g_close').click(function() {
+				$("#gui_kai").hide();
+			});
+		</script>
+		
+	</body>
+
+</html>
